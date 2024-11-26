@@ -17,6 +17,7 @@ def carregar_dados():
     engine = create_engine('sqlite:///banco.db')
     query = "SELECT * FROM dados"
     enem = pd.read_sql(query, con=engine)
+    return enem
 
 dados = carregar_dados()
 #st.dataframe(dados)
