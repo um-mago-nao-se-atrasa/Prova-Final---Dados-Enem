@@ -14,7 +14,7 @@ st.sidebar.header('Filtros')
 
 @st.cache_data
 def carregar_dados():
-    engine = create_engine('sqlite:///banco.db')
+    engine = create_engine('sqlite:///script/banco.db')
     query = "SELECT * FROM dados"
     enem = pd.read_sql(query, con=engine)
     return enem
